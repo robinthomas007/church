@@ -1,38 +1,261 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+  background: #E5E5E5;
+}
+
+.header {
+  height: 100px;
+  /* padding: 15px auto; */
+  display: flex;
+  align-items: center;
+  font-family: 'Crimson Text', serif;
+  background: #212121;
+  color: #fff;
+}
+
+.logo-wrap {
+  margin: 0px 40px;
+  height: 100%;
+  padding: 5px;
+}
+
+.header img {
+  height: 100%;
+}
+
+.carousel-item img {
+  max-height: 600px;
+}
+
+.carousel-caption {
+  background: RGBA(0, 0, 0, 0.6);
+}
+
+.header .heading p {
+  font-size: 15px;
+  border-bottom: 2px solid #F57F17;
+}
+
+.navbar-custom {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  width: 40%;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: auto;
+  margin-right: 40px;
+}
+
+.navbar-custom a {
+  color: #fff;
+  font-family: 'Roboto Condensed', serif;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  min-width: 90px;
+  line-height: 55px;
+  text-align: center;
+  margin-bottom: 0.3px;
+}
+
+.navbar-custom a.active {
+  color: #FBC02D;
+  border-bottom: 5px solid #FBC02D;
+}
+
+
+/* Makes the animation pause on hover */
+.moving-text:hover {
+  animation-play-state: paused;
+}
+
+.moving-text {
+  color: #4A14BC;
+  display: inline-block;
+  /* padding: 5px 10px; */
+  font-weight: bold;
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: 20px;
+  margin: 10px auto;
+}
+
+.verses {
+  box-shadow: 0px 4px 10px 0px #ccc;
+  background: #fff;
+}
+
+/* The animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+    color: #85D305;
+  }
+
+  50% {
+    color: #9C27B0;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    color: #4A14BC;
+  }
+}
+
+/* media query to enable animation for only those who want it */
+@media (prefers-reduced-motion: no-preference) {
+  .moving-text {
+    animation: marquee 15s linear infinite;
+  }
+}
+
+.footer {
+  color: #fff;
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-bg {
+  background: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer nav ul li {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+.footer nav ul li a {
+  color: #fff;
+}
+
+.meetings {
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+  margin-top: 10px;
+  padding: 15px;
+  align-items: center;
+}
+
+.meetings-bg {
+  background: #4A14BC;
+}
+
+.join-us {
+  font-size: 44px;
+  margin-right: 100px;
+  font-weight: bold;
+  font-family: 'Crimson Text', serif;
+}
+
+.days-time {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.day {
+  background: #9C27B0;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+span.time {
+  font-size: 18px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.no-pad {
+  padding: 0px !important;
+}
+
+.no-marg {
+  margin: 0px !important;
+}
+
+.welcome-wrap {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fff;
+  padding: 16px;
+  box-shadow: 1px 3px 10px 0px #0c0b0b;
 }
 
-.App-link {
-  color: #61dafb;
+.content-text {
+  width: 50% !important;
+  border-right: 2px solid #ddd;
+  text-align: justify;
+  padding: 36px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content-text h4 {
+  text-align: center;
+  background: #9c27b0;
+  color: #fff;
+  padding: 6px;
+}
+
+.pastors-img {
+  width: 50%;
+  padding: 36px;
+}
+
+.pastors-img img {
+  width: 100%;
+  max-height: 350px;
+}
+
+.pstr-content-wrap {
+  background: #f1f1f1;
+  padding: 16px;
+}
+
+.contacts-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+}
+
+.contacts-footer-bg {
+  background: #111;
+}
+
+.contacts-footer strong {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-dtl {
+  color: #FBC02D
+}
+
+.social-img img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.social-img {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 335px;
+  right: 0;
+  box-shadow: 2px 0px 4px 6px #ddd;
+  padding: 8px;
+  border-radius: 10px;
 }
